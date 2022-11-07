@@ -1,4 +1,3 @@
-import logo from 'assets/logo.svg';
 import styles from './Item.module.scss';
 import cardapio from '../itens.json';
 import classNames from 'classnames';
@@ -6,11 +5,11 @@ import classNames from 'classnames';
 type Props = typeof cardapio[0]
 
 export default function Item(props: Props) {
-    const { title, description, price, serving, category, size } = props;
+    const { title, description, price, serving, category, size, photo } = props;
     return(
         <div className={styles.item}>
             <div className={styles.item__imagem}>
-               <img src={logo} alt={title} />
+               <img src={photo} alt={title} />
             </div>
             <div className={styles.item__descricao}>
                 <div className={styles.item__titulo}>
