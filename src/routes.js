@@ -1,8 +1,8 @@
+import Header from 'components/Header';
 import Menu from 'components/Menu';
 import Cardapio from 'pages/Cardapio';
 import Inicio from 'pages/Inicio';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import styles from './Routes.module.scss';
 
 
 export default function AppRouter() {
@@ -10,11 +10,7 @@ export default function AppRouter() {
         <main>
             <Router>
                 <Menu />
-                <header className={styles.header}>
-                    <div className={styles.header__text}>
-                        A casa do código e da massa
-                    </div>
-                </header>
+                <Header/>
                 <Routes>
                     <Route path='/' element={<Inicio />}></Route>
                     <Route path='/cardapio' element={<Cardapio />}></Route>
