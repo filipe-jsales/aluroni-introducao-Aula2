@@ -10,10 +10,11 @@ export default function AppRouter() {
         <main>
             <Router>
                 <Menu />
-                <Header/>
                 <Routes>
-                    <Route path='/' element={<Inicio />}></Route>
-                    <Route path='/cardapio' element={<Cardapio />}></Route>
+                    <Route path='/' element={<Header/>}>
+                        <Route index element={<Inicio/>}></Route>
+                        <Route path='cardapio' element={<Cardapio />}></Route>
+                    </Route>
                 </Routes>
             </Router>
         </main>
