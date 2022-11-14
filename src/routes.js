@@ -3,13 +3,14 @@ import Header from 'components/Header';
 import Menu from 'components/Menu';
 import Cardapio from 'pages/Cardapio';
 import Inicio from 'pages/Inicio';
+import NotFound from 'pages/NotFound';
 import Sobre from 'pages/Sobre';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 export default function AppRouter() {
     return (
-        <main>
+        <main className='container'>
             <Router>
                 <Menu />
                 <Routes>
@@ -18,6 +19,7 @@ export default function AppRouter() {
                         <Route path='cardapio' element={<Cardapio />}></Route>
                         <Route path='sobre' element={<Sobre />}></Route>
                     </Route>
+                    <Route path='*'  element={<NotFound/>}></Route> 
                 </Routes>
                 <Footer/>
             </Router>
