@@ -2,7 +2,7 @@ import styles from './NotFound.module.scss';
 import { ReactComponent as NotFoundImage } from 'assets/not_found.svg'
 import classNames from 'classnames';
 import stylesTema from 'styles/Tema.module.scss';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function NotFound() {
     const navigate = useNavigate();
@@ -11,8 +11,8 @@ export default function NotFound() {
             [styles.container]: true,
             [stylesTema.container]: true
         })}>
-            <div className={styles.voltar}>
-                <button onClick={() => { navigate(-1) }}>
+            <div >
+                <button className={styles.voltar} onClick={() => { navigate(-1) }}>
                     {'< Voltar'}
                 </button>
             </div>
