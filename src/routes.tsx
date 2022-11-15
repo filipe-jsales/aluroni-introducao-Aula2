@@ -15,15 +15,15 @@ export default function AppRouter() {
             <Router>
                 <Menu />
                 <Routes>
-                    <Route path='/' element={<Header/>}>
-                        <Route index element={<Inicio/>}></Route>
+                    <Route path='/' element={<Header />}>
+                        <Route index element={<Inicio />}></Route>
                         <Route path='cardapio' element={<Cardapio />}></Route>
                         <Route path='sobre' element={<Sobre />}></Route>
-                        <Route path='prato/:id' element={<Prato />}></Route>
                     </Route>
-                    <Route path='*'  element={<NotFound/>}></Route> 
+                    <Route path='prato/:id' element={<Prato />}></Route>
+                    <Route path='*' element={<NotFound />}></Route>
                 </Routes>
-                <Footer/>
+                <Footer />
             </Router>
         </main>
 
